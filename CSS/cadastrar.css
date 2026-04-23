@@ -1,0 +1,129 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+}
+
+main{
+  background-image: url(../IMG/Backgrounds/o-que-fazer-com-seu-pet-na-zona-leste.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  border-top: 1px solid var(--cream);
+  border-bottom: 1px solid var(--cream);
+}
+
+.box {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 2rem;
+  color: #5e8a60;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.labelinput {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.inputBox input,
+.inputBox select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 18px;
+}
+
+.inputBox input:focus,
+.inputBox select:focus {
+  border-color: #355c7d;
+  box-shadow: 0 0 0 2px rgba(53, 92, 125, 0.2);
+  outline: none;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+button, .botao-salvar {
+  background-color: #5e8a60;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-salvar:hover{
+  background-color: rgba(94, 138, 96, 0.8);
+  transform: scale(1.03);
+}
+
+a {
+  color: #5e8a60;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.box p:last-of-type {
+  text-align: center;
+  margin-top: 20px;
+}
+.link-secundario {
+  text-align: center;
+  margin-top: 15px; /* espaçamento entre os links */
+}
+
+
+
+
+.link-secundario a:hover {
+  color: #2a4560;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .box {
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
+}

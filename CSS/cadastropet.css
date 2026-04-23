@@ -1,0 +1,229 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+}
+
+main{
+  background-image: url(../IMG/Backgrounds/BackGroundAtote.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  border-top: 1px solid var(--cream);
+  border-bottom: 1px solid var(--cream);
+}
+
+.boxpet {
+  max-width: 630px;
+  margin: 60px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+}
+
+fieldset {
+  max-width: 600px;
+  border: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+legend {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  color: #5e8a60;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.labelinput {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.inputUser, textarea, select {
+  background-color: #fff;
+  width: 540px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;  
+}
+
+.inputUser:focus, textarea:focus, select:focus {
+  border-color: #355c7d;
+  box-shadow: 0 0 0 2px rgba(53, 92, 125, 0.2);
+  outline: none;
+}
+
+.form-content{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputBox{
+  height: 90px;
+}
+
+.iboxNome{
+  width: 540px;
+}
+
+#duo{
+    width: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#duo input{
+  width: 230px;
+}
+
+#duo select{
+  width: 230px;
+}
+
+#idade{
+  max-width: 230px;
+}
+
+.link {
+  text-align: center;
+  width: 554px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.link a {
+  color: #5e8a60;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #5e8a60;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  width: 542px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: rgba(94, 138, 96, 0.8);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .boxpet {
+    max-width: 400px;
+  }
+
+  .iboxNome{
+    width: 100%;
+  }
+  fieldset{
+    max-width: 400px;
+  }
+  .form-content{
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+  #duo{
+    width: 360px;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .inputBox{
+    width: 360px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .inputUser, textarea, select {
+    width: 100%;
+  }
+
+  
+#duo input{
+  width: 100%;
+}
+
+#duo select{
+  width: 100%;
+}
+
+#idade{
+  max-width: 100%;
+}
+  
+  .link{
+    width: 100%;
+  }
+  button{
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 440px) {
+  .box-pet{
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  
+  fieldset{
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .form-content{
+    max-width: 250px;
+  }
+
+  #duo{
+    max-width: 250px;
+  }
+  .inputBox{
+    width: 250px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .inputUser, textarea, select {
+    width: 100%;
+  }
+}

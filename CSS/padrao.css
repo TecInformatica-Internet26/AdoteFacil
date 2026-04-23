@@ -1,0 +1,726 @@
+:root {
+  --green-deep: #1E5F3A;
+  --green-primary: #4CAF50;
+  --green-pastel: #E9F4EA;
+  --green-olive: #5e8a60;
+
+  --cream: #F7F5F2;
+  --brown-warm: #C89F7E;
+  --accent-purple: #A88CCD;
+
+  --gray-bg: #ECEAE8;
+  --gray-border: #D8D6D2;
+  --gray-text: #646464;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--green-deep);
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+header {
+  top: 0;
+  z-index: 999;
+  background-color: var(--cream);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 110px;
+  width: 190px;
+  margin-left: -25px;
+}
+
+/* Botão hambúrguer */
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  z-index: 11;
+}
+#burger-menu {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  transition: 0.25s ease-in-out;
+  left: 0;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0;
+}
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+#burger-menu:checked + .burger span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+#burger-menu:checked + .burger span:nth-of-type(2) {
+  opacity: 0;
+}
+#burger-menu:checked + .burger span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  bottom: 10px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: flex;
+  gap: 10px;
+  z-index: 1000; 
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.li-dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 90px;
+}
+
+.navbar .dropdown-content li a {
+  position: relative;
+  display: inline-block;
+  color: #646262;
+  padding: 10px 16px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+  text-decoration: none;
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navbar .dropdown-content li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #333;
+    transition: 0.4s ease;
+
+}
+
+.navbar .dropdown-content  li a:hover::after,
+.navbar .dropdown-content  li a.active::after {
+    width: 100%;
+}
+
+.navbar .dropdown-content li a:hover,
+.navbar .dropdown-content li a.active {
+    color: #333;
+}
+
+.usuario-box {
+  background-color: #54ac59;
+    margin: 23px 15px 23px 0;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 100%;
+}
+/* FOTO 100% limpa */
+.foto-perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.foto-perfil img{
+  width: 42px;
+  height: 42px;
+}
+
+.foto-inicial{
+  color: #fff;
+
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+}
+
+/* FOTO NÃO MUDA NO HOVER */
+.usuario-box:hover .foto-perfil,
+.foto-perfil:hover {
+    background: transparent !important;
+    filter: none !important;
+}
+
+/* DROPDOWN inicialmente oculto */
+.dropdown-user {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    background: var(--cream);
+    width: 180px;
+    height: 162px;
+    gap: 5px;
+    padding: 10px 0px 5px 0px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    z-index: 20;
+
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+/* ATIVO via JS */
+.usuario-box.active .dropdown-user {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* NOME */
+.nome-dropdown {
+    cursor: default;
+    font-weight: bold;
+    color: #333;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* LINKS */
+.dropdown-user a {
+    cursor: pointer;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all .2s;
+
+    text-align: left;
+    border-radius: 6px;
+}
+
+.dropdown-user a:hover {
+    color: #333;
+    background: rgba(0,0,0,0.1);
+}
+
+/* ===== MENU HAMBURGUER DO PERFIL ===== */
+
+.perfil-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburguer-btn {
+  background-color: #7866d5; /* mesma cor do botão "Entrar" original */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hamburguer-btn:hover {
+  background-color: #5e4dbb;
+}
+
+/* Dropdown */
+.perfil-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  width: 230px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.perfil-menu.open .perfil-dropdown {
+  display: block;
+}
+
+.perfil-header {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.perfil-header .perfil-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.perfil-nome {
+  font-weight: 600;
+  color: #3b2c68;
+}
+
+.perfil-dropdown a {
+  display: block;
+  padding: 12px 16px;
+  color: #3b2c68;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.perfil-dropdown a:hover {
+  background-color: rgba(120, 102, 213, 0.1);
+}
+
+.perfil-dropdown a.logout {
+  color: #d94b4b;
+  border-top: 1px solid #eee;
+}
+
+.pet-info{
+  height: 200px;
+}
+
+.pet-info h2{
+  font-size: 22px;
+}
+
+.sobre-content{
+  height: 250px;
+  word-wrap: break-word;     /* força a quebra */
+  overflow-wrap: break-word; /* alternativa moderna */
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .burger {
+    display: block; 
+    margin: 0 20px;
+  }
+
+  .dropdown-content {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: var(--cream);
+    display: none;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #burger-menu:checked ~ .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown-content a {
+    margin: 5px 0;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .dropdown-content #userMenu{
+    order: 1;
+  }
+  .dropdown-content .linkAdmin{
+    order: 2;
+  }
+  .dropdown-content .linkIndex{
+    order: 3;
+  }
+  .dropdown-content .linkSobre{
+    order: 4;
+  }
+  .dropdown-content .linkAdote{
+    order: 5;
+  }
+  .dropdown-content .linkCajudar{
+    order: 6;
+  }
+
+  .dropdown-user{
+    height: 185px;
+    right: -66px;
+  }
+
+  .usuario-box{
+    margin: 0 auto;
+  }
+
+  .foto-perfil img{
+  width: 42px;
+  height: 42px;
+}
+
+  .foto-perfil:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+}
+
+
+/* =========================================
+   VERSÃO DESKTOP
+   ========================================= */
+footer {
+    background-color: var(--cream);
+    border-top: 3px solid var(--cinza-medio);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    width: 100%;
+    gap: 40px;
+    color: #333;
+}
+
+footer h2 {
+    color: var(--brown-warm);
+    white-space: nowrap;
+}
+
+.footer {
+    display: flex;
+    width: 1500px;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.footer-coluna {
+    flex: 1 1 250px;
+    margin: 5px 10px;
+}
+
+.footer-coluna p,
+.footer-coluna a {
+    margin: 2px 0;
+}
+
+#cl1 {
+    width: 400px;
+}
+
+#cl2 {
+    width: 400px;
+    margin-left: 10px;
+}
+
+#cl3 {
+    width: 400px;
+    display: flex;
+    align-items:flex-end;
+    flex-direction: column;
+}
+#cl3 h2{
+  margin-right: 10px;
+}
+
+#cl1 p {
+    font-size: 14px;
+}
+
+/* --- LINK DISCRETO E ELEGANTE --- */
+#cl2 a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #4b0082;
+    font-weight: bold;       /* Negrito para diferenciar do resto */
+    border-bottom: 1px solid transparent; /* Linha invisível para não pular */
+    padding-bottom: 1px;     /* Afasta um pouquinho a linha do texto */
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse: aparece uma linha fina */
+#cl2 a:hover {
+    border-bottom: 1px solid #4b0082;
+    opacity: 0.8;            /* Leve transparência */
+}
+/* -------------------------------- */
+
+.icons-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.icons-row img {
+    height: 50px;
+    width: auto;
+}
+
+.footer-rodape {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: -20px;
+    font-size: 13px;
+    border-top: 1px solid #ddd;
+}
+
+/* =========================================
+   RESPONSIVIDADE (Tablet e Mobile)
+   ========================================= */
+
+/* TABLET (Menor que 1200px até 601px) */
+@media (max-width: 1268px) {
+    .footer {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    #cl1, #cl2, #cl3 {
+        max-width: 400px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        flex: 1 1 40%;
+    }
+  
+    .icons-row{
+      display: flex;
+      justify-content: center;
+    }
+
+    footer h2 {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+
+    #cl3 h2{
+      text-align: center;
+    }
+    
+    #cl1 p, #cl2 a {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1024px){
+    .footer{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #cl1{
+      text-align: center;
+    }
+    #cl3{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .icons-row{
+      display: flex;
+      justify-content: center;
+    }
+}
+
+/* MOBILE (Menor que 600px) */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        padding: 10px !important;
+        gap: 10px;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-coluna, #cl1, #cl2, #cl3 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 20px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Textos bem menores no mobile */
+    footer h2 {
+        font-size: 16px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #cl1 p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    #cl2 a {
+        font-size: 14px;
+        margin-top: 5px;
+        /* No mobile, deixamos a linha sempre visível mas bem clarinha
+           para indicar clique sem precisar passar o mouse */
+        border-bottom: 1px solid rgba(75, 0, 130, 0.3); 
+    }
+    
+    #cl3 h2{
+      text-align: center;
+    }
+
+    .icons-row img {
+        height: 35px;
+    }
+    
+    .footer-rodape {
+        margin-top: 0;
+        font-size: 11px;
+    }
+}
+
+  /* Fundo escuro */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Caixa do popup */
+.popup {
+    background: #fff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    text-align: center;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cancelar, .btn-confirmar {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: #ccc;
+}
+
+.btn-cancelar:hover {
+    background: #b3b3b3;
+}
+
+.btn-confirmar {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background: #449d48;
+}

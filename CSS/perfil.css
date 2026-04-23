@@ -1,0 +1,458 @@
+:root {
+  --green-deep: #1E5F3A;
+  --green-primary: #4CAF50;
+  --green-pastel: #E9F4EA;
+
+  --cream: #F7F5F2;
+  --brown-warm: #C89F7E;
+  --accent-purple: #A88CCD;
+
+  --gray-bg: #ECEAE8;
+  --gray-border: #D8D6D2;
+  --gray-text: #646464;
+}
+
+
+header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    max-width: 550px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    color: #5e8a60;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.fotoPerfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #5e8a60;
+    margin-bottom: 25px;
+}
+
+.foto-inicial-perfil {
+    width: 180px;     /* coloque o tamanho da foto do seu perfil */
+    height: 180px;
+    margin-bottom: 25px;
+    background: #54ac59;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    background-color: var(--green-pastel);
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: left;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+}
+
+.info:hover {
+    background-color: rgba(233, 244, 234, 0.4);
+}
+
+.numeros, .locais {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.tel, .zap, .estado, .cidade {
+    width: 248px;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.estado{
+    width: 150px;
+}
+
+.cidade{
+    width: 100%; 
+}
+
+#registrar {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+#registrar a,
+#registrar button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#registrar a.btn {
+    background-color: #5e8a60;
+    color: #fff;
+    text-decoration: none;
+}
+
+#registrar a.btn:hover {
+    background-color: rgba(94, 138, 96, 0.8);
+    transform: scale(1.02);
+}
+
+#registrar button {
+    background-color: #ff4b4b;
+    color: #fff;
+}
+
+#registrar button:hover {
+    background-color: #d93b3b;
+    transform: scale(1.02);
+}
+
+.pets-container {
+    background-color: #ffffff;
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-info {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-info:focus {
+    border-color: #7a8ccb;
+    box-shadow: 0 0 0 3px rgba(122, 140, 203, 0.2);
+}
+
+input[type="file"].input-info {
+    padding: 6px;
+    background-color: transparent;
+    border: none;
+}
+
+.cidade{
+    word-wrap: break-word;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 25px 20px;
+    } 
+
+    .fotoPerfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    .info {
+        font-size: 15px;
+    }
+
+    #registrar a,
+    #registrar button {
+        font-size: 15px;
+    }
+
+    .numeros, .locais {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .tel, .zap, .estado, .cidade {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+    
+        /* Container pai que segura o Perfil e os Pets */
+        .conteudo-principal {
+            display: flex; /* Ativa o layout flexível */
+            flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+            gap: 20px; /* Espaço entre as duas colunas */
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            align-items: flex-start; /* Alinha os itens ao topo */
+        }
+
+        /* Coluna da Esquerda (Perfil) */
+        .container {
+            flex: 1; /* Ocupa 1 parte do espaço */
+            min-width: 300px; /* Largura mínima */
+            background: #fff; /* Opcional: cor de fundo */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Opcional: sombra */
+        }
+
+        /* Coluna da Direita (Pets) */
+        .pets-container {
+            flex: 2; /* Ocupa 2 partes do espaço (mais largo que o perfil) */
+            min-width: 300px;
+        }
+
+        /* Grade para os cards dos pets ficarem bonitos dentro da coluna da direita */
+        .lista-pets {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .pet-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .pet-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Responsividade para celular */
+        @media (max-width: 768px) {
+            .conteudo-principal {
+                flex-direction: column; /* Volta a ficar um embaixo do outro no celular */
+            }
+            .container, .pets-container {
+                width: 100%;
+            }
+        }
+        /* --- CONTAINER PRINCIPAL (A GRADE) --- */
+.pets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+}
+
+.pets-container h2 {
+    grid-column: 1 / -1;
+    color: #444;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+/* --- ESTILO DO CARD --- */
+.pet-card {
+    height: 430px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito ao passar o mouse */
+.pet-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- IMAGEM DO PET --- */
+.pet-img {
+    width: 100%;
+    height: 160px; 
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- TEXTOS (Nome, Raça, Status) --- */
+.pet-card h3 {
+    margin: 10px 10px 4px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.pet-card p {
+    margin: 3px 10px;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+/* Destaque para o texto do Status */
+.pet-card p strong {
+    color: #333;
+}
+
+/* --- FORMULÁRIOS E BOTÕES --- */
+.pet-card form {
+    padding: 0 10px 8px; 
+    display: flex;
+    gap: 8px; 
+    margin-top: auto;
+}
+
+/* Select (Menu suspenso) */
+.pet-card select {
+    flex: 1; 
+    padding: 6px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 0.85rem; 
+    cursor: pointer;
+}
+
+/* Botões Gerais */
+.pet-card button {
+    padding: 7px 10px; 
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 0.85rem; 
+    color: white;
+}
+
+/* Botão de Atualizar (Primeiro form) */
+.pet-card form:first-of-type button {
+  background-color:#c8f3cc;
+  color: #333;
+}
+
+.pet-card form:first-of-type button:hover {
+  background-color: #9ee9a6;
+}
+
+.buttonEditarpet button{
+    background-color: #fff;
+    color: #333;
+    border: 1px solid var(--gray-border);
+
+    width: 176px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: 600;
+
+}
+
+.buttonEditarpet button:hover{
+    background-color: rgba(236, 234, 232, 0.6);
+}
+
+/* Botão de Deletar (Segundo form) */
+.pet-card form:last-of-type {
+    padding-bottom: 10px; 
+}
+
+.pet-card form:last-of-type button {
+    background-color: #fff;
+    color: #dc3545; 
+    border: 1px solid #dc3545;
+    width: 100%; 
+}
+
+.pet-card form:last-of-type button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Mensagem de "Nenhum pet" */
+.pets-container > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-top: 15px;
+}
+  

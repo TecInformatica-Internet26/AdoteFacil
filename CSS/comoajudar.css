@@ -1,0 +1,132 @@
+/* Conteúdo principal */
+#ajuda {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+#ajudar{
+  background-color: #7a8ccb;
+}
+main h1, h2, h3, h4 {
+    color: #5e8a60;
+}
+
+main h1 {
+    color: #5e8a60;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+
+main h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+main p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+main ul {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    list-style-type: disc;
+}
+
+main ul li {
+    margin-bottom: 10px;
+}
+.titulo {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.titulo-ajuda h1 {
+  font-size: 2.8rem;
+  color: #5e8a60;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.linha-decorativa {
+  width: 100px;
+  height: 4px;
+  background-color: #5e8a60;;
+  margin: 0 auto;
+  border-radius: 2px;
+  margin-bottom: 25px;
+}
+
+#call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 10vh; 
+  margin-bottom: 15px; 
+  text-align: center;
+}
+
+#call-to-action  {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #355c7d;
+}
+
+
+/* Imagens depoimento dentro do conteúdo */
+img.depoimento {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+#depoimentos h2 {
+  color: #355c7d;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.depoimento-bloco p {
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 10px auto 5px auto;
+  color: #555;
+}
+
+.depoimento-bloco strong {
+  color: #222;
+  font-weight: 600;
+}
+
+.depoimento {
+  border-radius: 50%;
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+}
+
+/* Responsividade para imagens depoimento */
+@media (max-width: 600px) {
+    img.depoimento {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+}

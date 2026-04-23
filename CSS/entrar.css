@@ -1,0 +1,279 @@
+:root {
+  --green-deep: #1E5F3A;
+  --green-primary: #4CAF50;
+  --green-pastel: #E9F4EA;
+
+  --cream: #F7F5F2;
+  --brown-warm: #C89F7E;
+  --accent-purple: #A88CCD;
+
+  --gray-bg: #ECEAE8;
+  --gray-border: #D8D6D2;
+  --gray-text: #646464;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+main{
+  background-image: url(../IMG/Backgrounds/BackgroundEntrar2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  max-width: 420px;
+  margin: 125px 0;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1;
+}
+
+.div-invisivel{
+  width: 200px; 
+  opacity: 0;
+}
+
+.login-container h1 {
+  font-size: 2.4rem;
+  color: #5e8a60;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.linha-decorativa {
+  width: 90px;
+  height: 4px;
+  background-color: #5e8a60;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.login-form label {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.login-form input:focus {
+  border-color: #355c7d;
+  box-shadow: 0 0 0 2px rgba(53, 92, 125, 0.2);
+  outline: none;
+}
+
+.login-form button.botao {
+  background-color: #5e8a60;
+  color: #fff;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button.botao:hover {
+  background-color: rgba(94, 138, 96, 0.8);
+  transform: scale(1.03);
+}
+
+.cadastro-link {
+  margin-top: 22px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.cadastro-link a {
+  color: #5e8a60;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cadastro-link a:hover {
+  text-decoration: underline;
+}
+
+.modal-bg {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,.4);
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 999;
+}
+
+.modal-box {
+background: #fff;
+padding: 20px 30px;
+border-radius: 10px;
+text-align: center;
+max-width: 350px;
+font-family: sans-serif;
+}
+.modal-box h3 {
+color: #222;
+}
+.modal-box button {
+margin-top: 15px;
+padding: 8px 16px;
+border: none;
+background: #1385ff;
+color: #fff;
+cursor: pointer;
+border-radius: 6px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  width: 350px;
+  animation: fadein .3s ease;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  padding: 10px 15px;
+  background: #1E90FF;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .login-container {
+    margin: 50px 20px;
+    padding: 30px 20px;
+  }
+}
+
+/* MOBILE MUITO PEQUENO (Menor que 400px) */
+@media (max-width: 400px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-contato p {
+    font-size: 0.85rem;
+  }
+  
+  .social-icons {
+    gap: 10px;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1200px){
+  body{
+     background-position: right bottom; 
+  }
+}
+
+@media (max-width: 1024px){
+
+  main{
+    background-image: url(../IMG/Backgrounds/GatinhoTablet2.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  main{
+    background-position: center;
+  }
+
+    .login-container{
+    max-width: 500px;
+  }
+  .div-invisivel{
+    display: none;
+  }
+}
+
+@media (max-width: 526px) {
+  main{
+    background-position: left;
+  }
+  .login-container{
+    max-width: 500px;
+  }
+  .div-invisivel{
+    display: none;
+  }
+}
+
+.erro-login {
+    background: #ffe5e5;
+    color: #a30000;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+}

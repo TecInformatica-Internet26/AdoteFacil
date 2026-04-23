@@ -1,0 +1,399 @@
+:root {
+  --green-deep: #1E5F3A;
+  --green-primary: #4CAF50;
+  --green-pastel: #E9F4EA;
+  --green-olive: #5e8a60;
+
+  --cream: #F7F5F2;
+  --brown-warm: #C89F7E;
+  --accent-purple: #A88CCD;
+
+  --gray-bg: #ECEAE8;
+  --gray-border: #D8D6D2;
+  --gray-text: #646464;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Wix Madefor Text', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+main{
+  min-height: 70vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--green-olive);
+}
+
+/* ========== TABELA ========== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+thead {
+  background: var(--green-pastel);
+}
+
+thead th {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+tbody tr {
+  background: white;
+  transition: 0.3s;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+tbody td {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* Hover na linha */
+tbody tr:hover {
+  background: rgba(204, 204, 204, 0.2);
+}
+
+/* Foto do usuário */
+table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--green-olive );
+}
+
+.foto-inicial-perfil{
+  background-color: #54ac59;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--green-olive );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== LINKS DE AÇÃO ========== */
+
+td a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 6px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    height: 38px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
+}
+
+/* Editar */
+td a[href*="editar"] {
+  background: var(--green-olive);
+  color: white;
+}
+
+td a[href*="editar"]:hover {
+  background: rgba(94, 138, 96, 0.8);
+}
+
+/* Apagar */
+.btn-delete {
+  background: #ca5b57;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c9302c;
+}
+
+/* ========== BOTÕES DE VOLTAR ========== */
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.back-button a {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: var(--green-olive);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.back-button a:hover {
+  background: rgba(94, 138, 96, 0.8);
+}
+
+/* ========== RESPONSIVO ========== */
+
+@media (max-width: 1264px){
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead {
+    font-size: 13px;
+  }
+
+  tbody td {
+    font-size: 12px;
+  }
+
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead {
+    font-size: 13px;
+  }
+
+  tbody td {
+    font-size: 12px;
+  }
+
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .back-button {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-button a {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+}
+
+.botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
+}
+
+/* Editar */
+.btn-editar {
+    background: var(--azul-principal);
+}
+.btn-editar:hover {
+    background: var(--azul-hover);
+}
+
+/* Apagar */
+.btn-apagar {
+    background: #d9534f;
+}
+.btn-apagar:hover {
+    background: #c9302c;
+}
+
+/* Select de status */
+.select-status {
+    min-width: 120px;
+    height: 38px;
+    padding-left: 6px;
+    border-radius: 8px;
+    border: 2px solid var(--cinza-medio);
+    font-weight: bold;
+    background: white;
+}
+
+/* Salvar */
+.btn-salvar {
+    background: var(--brown-warm);
+}
+.btn-salvar:hover {
+    background: var(--azul-hover);
+}
+
+/* Agrupamentos */
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acoes-linha {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.acoes-linha form {
+    display: flex;
+    gap: 10px;
+}
+
+/* ========= PADRONIZAÇÃO DOS BOTÕES ========= */
+
+.botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
+}
+html, body {
+  height: 100%; /* Garante que o corpo ocupe a altura total */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; /* Altura mínima igual à viewport */
+}
+
+/* Editar */
+.btn-editar {
+    background: var(--azul-principal);
+}
+.btn-editar:hover {
+    background: var(--azul-hover);
+}
+
+/* Apagar */
+.btn-apagar {
+    background: #d9534f;
+}
+.btn-apagar:hover {
+    background: #c9302c;
+}
+
+/* Select de status */
+.select-status {
+    min-width: 120px;
+    height: 38px;
+    padding-left: 6px;
+    border-radius: 8px;
+    border: 2px solid var(--cinza-medio);
+    font-weight: bold;
+    background: white;
+}
+
+/* Salvar */
+.btn-salvar {
+    background: var(--gray-bg);
+    color: var(--gray-text);
+}
+.btn-salvar:hover {
+    background: rgba(216, 214, 210, 0.8);
+}
+
+/* Agrupamentos */
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acoes-linha {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.acoes-linha form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Mantém o resto do seu CSS intacto */
+
